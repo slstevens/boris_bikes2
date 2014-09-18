@@ -2,6 +2,10 @@ require './lib/bike_container.rb'
 
 describe BikeContainer do
 
+	let (:bike) { double :bike }
+	let (:broken_bike) { double :broken_bike }
+	let (:holder) { BikeContainer.new }
+
 	it "should dock available bikes" do
 		bike = double :bike
 		holder = BikeContainer.new
@@ -35,9 +39,13 @@ describe BikeContainer do
 		holder.release(broken_bike)
 		expect(holder.bike_count).to eq(0)
 	end
-end
 
-# 	# it "should know when it's full" do
+	it "should know when it's full" do
+
+
+	end
+
+end
 
 # 	# it "should know when it's empty" do
 
